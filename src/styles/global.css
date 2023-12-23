@@ -8,6 +8,19 @@
   }
 }
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+
+
+@font-face{
+  font-family: "dalena";
+  src: url("/fonts/dalena.ttf");
+}
+
+
+
 .prose ul li code, p code {
   background: #1e1e3f !important;
   color: #9efeff !important;
@@ -36,12 +49,13 @@
   text-transform: uppercase;
   padding: 3px 10px;
   display: block;
+  
   background: repeating-linear-gradient(
       -45deg,
       transparent,
       transparent 5px,
-      hsla(0, 0%, 0%, 0.025) 5px,
+      hsla(0, 100%, 50%, 0.025) 5px,
       hsla(0, 0%, 0%, 0.025) 10px
     )
-    hsla(203, 11%, 95%, 0.4);
+    hsla(325, 100%, 48%, 0.4);
 }

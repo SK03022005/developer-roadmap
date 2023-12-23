@@ -3,12 +3,10 @@ import CaptchaScripts from '../../components/Captcha/CaptchaScripts.astro';
 import FAQs from '../../components/FAQs/FAQs.astro';
 import FrameRenderer from '../../components/FrameRenderer/FrameRenderer.astro';
 import MarkdownFile from '../../components/MarkdownFile.astro';
-import RelatedRoadmaps from '../../components/RelatedRoadmaps.astro';
-import RoadmapHeader from '../../components/RoadmapHeader.astro';
-import ShareIcons from '../../components/ShareIcons/ShareIcons.astro';
 import TopicOverlay from '../../components/TopicOverlay/TopicOverlay.astro';
 import UpcomingForm from '../../components/UpcomingForm.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RoadmapHeader from '../../components/RoadmapHeader.astro';
 import { generateArticleSchema, generateFAQSchema } from '../../lib/jsonld-schema';
 import { getRoadmapIds, RoadmapFrontmatter } from '../../lib/roadmap';
 
@@ -49,7 +47,7 @@ if (roadmapFAQs.length) {
   jsonLdSchema.push(generateFAQSchema(roadmapFAQs));
 }
 
-const contentContributionLink = `https://github.com/kamranahmedse/developer-roadmap/tree/master/src/data/roadmaps/${roadmapId}/content`;
+const contentContributionLink = `https://github.com/kgex/developer-roadmap/tree/master/src/data/roadmaps/${roadmapId}/content`;
 ---
 
 <BaseLayout
@@ -57,7 +55,6 @@ const contentContributionLink = `https://github.com/kamranahmedse/developer-road
   title={roadmapData?.seo?.title}
   description={roadmapData.seo.description}
   keywords={roadmapData.seo.keywords}
-  sponsor={roadmapData.sponsor}
   noIndex={roadmapData.isUpcoming}
   jsonLd={jsonLdSchema}
 >
@@ -78,7 +75,6 @@ const contentContributionLink = `https://github.com/kamranahmedse/developer-road
     {
       !roadmapData.isUpcoming && roadmapData.jsonUrl && (
         <div class='max-w-[1000px] container relative'>
-          <ShareIcons description={roadmapData.briefDescription} pageUrl={`https://roadmap.sh/${roadmapId}`} />
           <TopicOverlay contentContributionLink={contentContributionLink} />
 
           <FrameRenderer
@@ -104,7 +100,6 @@ const contentContributionLink = `https://github.com/kamranahmedse/developer-road
     {roadmapData.isUpcoming && <UpcomingForm />}
 
     <FAQs faqs={roadmapFAQs} />
-    <RelatedRoadmaps roadmap={roadmapData} />
 
     <CaptchaScripts slot='after-footer' />
   </div>

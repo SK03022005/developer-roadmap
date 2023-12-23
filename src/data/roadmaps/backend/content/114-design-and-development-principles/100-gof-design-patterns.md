@@ -1,6 +1,6 @@
 # Design Patterns
 
-Design patterns are typical solutions to commonly occurring problems in software design. They can be broken into three categories: 
+Design patterns are typical solutions to commonly occurring problems in software design. They can be broken into three categories:
 
 - Creational Patterns for the creation of objects
 - Structural Patterns to provide relationship between objects
@@ -8,6 +8,6 @@ Design patterns are typical solutions to commonly occurring problems in software
 
 Visit the following resources to learn more:
 
-- [Design Patterns for Humans](https://github.com/kamranahmedse/design-patterns-for-humans)
+- [Design Patterns for Humans](https://github.com/kgex/design-patterns-for-humans)
 - [GOF design patterns](https://springframework.guru/gang-of-four-design-patterns/)
 - [Design Patterns](https://refactoring.guru/design-patterns)
